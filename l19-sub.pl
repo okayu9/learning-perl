@@ -5,9 +5,7 @@ sub booby{
   my $min = shift(@_);
   my $min_second = shift(@_);
   if ($min_second < $min){
-    my $tmp = $min;
-    $min = $min_second;
-    $min_second = $tmp;
+    ($min, $min_second) = ($min_second, $min);
   }
   for (@_){
     if ($_ < $min){
